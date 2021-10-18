@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import HooksCakeContainer from "./components/HooksCakeContainer";
+import IceCreamContainer from "./components/IceCreamContainer";
+import NewCakeContainer from "./components/NewCakeContainer";
+import { Provider } from "react-redux";
+import store from "./redux/cakes/store";
+import ItemContainer from "./components/ItemContainer";
+import TransactionalList from "./react-crud/with-redux/components/TransactionalList";
+/* function App() {
+  return (
+    <Provider store={store}>
+      <div className="App">
+        <ItemContainer cake/>
+        <HooksCakeContainer></HooksCakeContainer>
+        <IceCreamContainer></IceCreamContainer>
+        <NewCakeContainer></NewCakeContainer> 
+      </div>
+    </Provider>
+  );
+}
+
+export default App; */
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TransactionalList />
     </div>
   );
 }
